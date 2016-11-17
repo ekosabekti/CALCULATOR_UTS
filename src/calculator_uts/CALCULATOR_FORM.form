@@ -152,16 +152,25 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="7"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tujuhActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="empat">
       <Properties>
         <Property name="text" type="java.lang.String" value="4"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="empatActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="dua">
       <Properties>
         <Property name="text" type="java.lang.String" value="2"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="duaActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="lima">
       <Properties>
@@ -175,26 +184,41 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="0"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nolActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="delapan">
       <Properties>
         <Property name="text" type="java.lang.String" value="8"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="delapanActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="tiga">
       <Properties>
         <Property name="text" type="java.lang.String" value="3"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tigaActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="enam">
       <Properties>
         <Property name="text" type="java.lang.String" value="6"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="enamActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="sembilan">
       <Properties>
         <Property name="text" type="java.lang.String" value="9"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="sembilanActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="hapus">
       <Properties>

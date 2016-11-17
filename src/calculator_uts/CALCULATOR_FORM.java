@@ -59,10 +59,25 @@ public class CALCULATOR_FORM extends javax.swing.JFrame {
         koma.setText(",");
 
         tujuh.setText("7");
+        tujuh.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tujuhActionPerformed(evt);
+            }
+        });
 
         empat.setText("4");
+        empat.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                empatActionPerformed(evt);
+            }
+        });
 
         dua.setText("2");
+        dua.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                duaActionPerformed(evt);
+            }
+        });
 
         lima.setText("5");
         lima.addActionListener(new java.awt.event.ActionListener() {
@@ -72,14 +87,39 @@ public class CALCULATOR_FORM extends javax.swing.JFrame {
         });
 
         nol.setText("0");
+        nol.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nolActionPerformed(evt);
+            }
+        });
 
         delapan.setText("8");
+        delapan.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                delapanActionPerformed(evt);
+            }
+        });
 
         tiga.setText("3");
+        tiga.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tigaActionPerformed(evt);
+            }
+        });
 
         enam.setText("6");
+        enam.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                enamActionPerformed(evt);
+            }
+        });
 
         sembilan.setText("9");
+        sembilan.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                sembilanActionPerformed(evt);
+            }
+        });
 
         hapus.setText("C");
 
@@ -189,7 +229,9 @@ public class CALCULATOR_FORM extends javax.swing.JFrame {
         }// </editor-fold>//GEN-END:initComponents
 
     private void limaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_limaActionPerformed
-        // TODO add your handling code here:
+        String limaText = display.getText()
+                +lima.getText();
+        display.setText(limaText);
     }//GEN-LAST:event_limaActionPerformed
 
     private void satuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_satuActionPerformed
@@ -197,6 +239,54 @@ public class CALCULATOR_FORM extends javax.swing.JFrame {
                 +satu.getText();
         display.setText(satuText);
     }//GEN-LAST:event_satuActionPerformed
+
+    private void duaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_duaActionPerformed
+  String duaText = display.getText()
+                +dua.getText();
+        display.setText(duaText);
+    }//GEN-LAST:event_duaActionPerformed
+
+    private void tigaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tigaActionPerformed
+      String tigaText = display.getText()
+                +tiga.getText();
+        display.setText(tigaText);
+    }//GEN-LAST:event_tigaActionPerformed
+
+    private void empatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_empatActionPerformed
+        String empatText = display.getText()
+                +empat.getText();
+        display.setText(empatText);
+    }//GEN-LAST:event_empatActionPerformed
+
+    private void enamActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_enamActionPerformed
+        String enamText = display.getText()
+                +enam.getText();
+        display.setText(enamText);
+    }//GEN-LAST:event_enamActionPerformed
+
+    private void tujuhActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tujuhActionPerformed
+        String tujuhText = display.getText()
+                +tujuh.getText();
+        display.setText(tujuhText);
+    }//GEN-LAST:event_tujuhActionPerformed
+
+    private void delapanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_delapanActionPerformed
+        String delapanText = display.getText()
+                +delapan.getText();
+        display.setText(delapanText);
+    }//GEN-LAST:event_delapanActionPerformed
+
+    private void sembilanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sembilanActionPerformed
+        String sembilanText = display.getText()
+                +sembilan.getText();
+        display.setText(sembilanText);
+    }//GEN-LAST:event_sembilanActionPerformed
+
+    private void nolActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nolActionPerformed
+        String nolText = display.getText()
+                +nol.getText();
+        display.setText(nolText);
+    }//GEN-LAST:event_nolActionPerformed
 
     /**
      * @param args the command line arguments
