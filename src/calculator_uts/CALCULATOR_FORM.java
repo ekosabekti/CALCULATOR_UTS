@@ -10,9 +10,10 @@ package calculator_uts;
  */
 public class CALCULATOR_FORM extends javax.swing.JFrame {
 
-    /**
-     * Creates new form CALCULATOR_FORM
-     */
+   private double jumlah1 =0;
+   private double jumlah2 =0;
+   private char pilih;
+   
     public CALCULATOR_FORM() {
         initComponents();
     }
@@ -49,6 +50,11 @@ public class CALCULATOR_FORM extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         satu.setText("1");
+        satu.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                satuActionPerformed(evt);
+            }
+        });
 
         koma.setText(",");
 
@@ -185,6 +191,12 @@ public class CALCULATOR_FORM extends javax.swing.JFrame {
     private void limaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_limaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_limaActionPerformed
+
+    private void satuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_satuActionPerformed
+        String satuText = display.getText()
+                +satu.getText();
+        display.setText(satuText);
+    }//GEN-LAST:event_satuActionPerformed
 
     /**
      * @param args the command line arguments
