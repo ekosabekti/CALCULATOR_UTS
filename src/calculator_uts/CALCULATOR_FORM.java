@@ -10,10 +10,10 @@ package calculator_uts;
  */
 public class CALCULATOR_FORM extends javax.swing.JFrame {
 
-   private double jumlah1 =0;
-   private double jumlah2 =0;
-   private char pilih;
-   
+    private double jumlah1 = 0;
+    private double jumlah2 = 0;
+    private char pilih;
+
     public CALCULATOR_FORM() {
         initComponents();
     }
@@ -122,16 +122,46 @@ public class CALCULATOR_FORM extends javax.swing.JFrame {
         });
 
         hapus.setText("C");
+        hapus.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                hapusActionPerformed(evt);
+            }
+        });
 
         plus.setText("+");
+        plus.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                plusActionPerformed(evt);
+            }
+        });
 
         kurang.setText("-");
+        kurang.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                kurangActionPerformed(evt);
+            }
+        });
 
         kali.setText("X");
+        kali.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                kaliActionPerformed(evt);
+            }
+        });
 
         bagi.setText("\\");
+            bagi.addActionListener(new java.awt.event.ActionListener() {
+                public void actionPerformed(java.awt.event.ActionEvent evt) {
+                    bagiActionPerformed(evt);
+                }
+            });
 
             samadengan.setText("=");
+            samadengan.addActionListener(new java.awt.event.ActionListener() {
+                public void actionPerformed(java.awt.event.ActionEvent evt) {
+                    samadenganActionPerformed(evt);
+                }
+            });
 
             jButton18.setText("+/-");
 
@@ -141,14 +171,14 @@ public class CALCULATOR_FORM extends javax.swing.JFrame {
                 layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(21, 21, 21)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(layout.createSequentialGroup()
                             .addComponent(satu)
                             .addGap(18, 18, 18)
                             .addComponent(dua)
                             .addGap(18, 18, 18)
                             .addComponent(tiga)
-                            .addGap(18, 18, 18)
+                            .addGap(14, 14, 14)
                             .addComponent(plus))
                         .addGroup(layout.createSequentialGroup()
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -186,7 +216,7 @@ public class CALCULATOR_FORM extends javax.swing.JFrame {
                                     .addGap(18, 18, 18)
                                     .addComponent(bagi))
                                 .addComponent(samadengan, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addComponent(display))
+                        .addComponent(display, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addContainerGap(28, Short.MAX_VALUE))
             );
             layout.setVerticalGroup(
@@ -230,63 +260,113 @@ public class CALCULATOR_FORM extends javax.swing.JFrame {
 
     private void limaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_limaActionPerformed
         String limaText = display.getText()
-                +lima.getText();
+                + lima.getText();
         display.setText(limaText);
     }//GEN-LAST:event_limaActionPerformed
 
     private void satuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_satuActionPerformed
         String satuText = display.getText()
-                +satu.getText();
+                + satu.getText();
         display.setText(satuText);
     }//GEN-LAST:event_satuActionPerformed
 
     private void duaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_duaActionPerformed
-  String duaText = display.getText()
-                +dua.getText();
+        String duaText = display.getText()
+                + dua.getText();
         display.setText(duaText);
     }//GEN-LAST:event_duaActionPerformed
 
     private void tigaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tigaActionPerformed
-      String tigaText = display.getText()
-                +tiga.getText();
+        String tigaText = display.getText()
+                + tiga.getText();
         display.setText(tigaText);
     }//GEN-LAST:event_tigaActionPerformed
 
     private void empatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_empatActionPerformed
         String empatText = display.getText()
-                +empat.getText();
+                + empat.getText();
         display.setText(empatText);
     }//GEN-LAST:event_empatActionPerformed
 
     private void enamActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_enamActionPerformed
         String enamText = display.getText()
-                +enam.getText();
+                + enam.getText();
         display.setText(enamText);
     }//GEN-LAST:event_enamActionPerformed
 
     private void tujuhActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tujuhActionPerformed
         String tujuhText = display.getText()
-                +tujuh.getText();
+                + tujuh.getText();
         display.setText(tujuhText);
     }//GEN-LAST:event_tujuhActionPerformed
 
     private void delapanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_delapanActionPerformed
         String delapanText = display.getText()
-                +delapan.getText();
+                + delapan.getText();
         display.setText(delapanText);
     }//GEN-LAST:event_delapanActionPerformed
 
     private void sembilanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sembilanActionPerformed
         String sembilanText = display.getText()
-                +sembilan.getText();
+                + sembilan.getText();
         display.setText(sembilanText);
     }//GEN-LAST:event_sembilanActionPerformed
 
     private void nolActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nolActionPerformed
         String nolText = display.getText()
-                +nol.getText();
+                + nol.getText();
         display.setText(nolText);
     }//GEN-LAST:event_nolActionPerformed
+
+    private void plusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_plusActionPerformed
+        String tombol_text = plus.getText();
+        getOperator(tombol_text);
+    }//GEN-LAST:event_plusActionPerformed
+
+    private void kurangActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kurangActionPerformed
+        String tombol_text = kurang.getText();
+        getOperator(tombol_text);
+    }//GEN-LAST:event_kurangActionPerformed
+
+    private void kaliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kaliActionPerformed
+        String tombol_text = kali.getText();
+        getOperator(tombol_text);
+    }//GEN-LAST:event_kaliActionPerformed
+
+    private void bagiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bagiActionPerformed
+        String tombol_text = bagi.getText();
+        getOperator(tombol_text);
+    }//GEN-LAST:event_bagiActionPerformed
+
+    private void hapusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hapusActionPerformed
+        jumlah2 = 0;
+        display.setText("");
+    }//GEN-LAST:event_hapusActionPerformed
+
+    private void samadenganActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_samadenganActionPerformed
+        switch (pilih) {
+            case '+':
+                jumlah2 = jumlah1
+                        + Double.parseDouble(display.getText());
+                break;
+                case '-':
+                jumlah2 = jumlah1
+                        - Double.parseDouble(display.getText());
+                break;
+                    case '*':
+                jumlah2 = jumlah1
+                        * Double.parseDouble(display.getText());
+                break;
+                        case '/':
+                jumlah2 = jumlah1
+                        / Double.parseDouble(display.getText());
+                break;
+                            
+
+        }
+        display.setText(Double.toString(jumlah2));
+        jumlah1 = 0;
+    }//GEN-LAST:event_samadenganActionPerformed
 
     /**
      * @param args the command line arguments
@@ -343,4 +423,8 @@ public class CALCULATOR_FORM extends javax.swing.JFrame {
     private javax.swing.JButton tiga;
     private javax.swing.JButton tujuh;
     // End of variables declaration//GEN-END:variables
+
+    private void getOperator(String tombol_text) {
+        throw new UnsupportedOperationException("Not yet implemented");
+    }
 }
