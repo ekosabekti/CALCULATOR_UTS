@@ -425,6 +425,8 @@ public class CALCULATOR_FORM extends javax.swing.JFrame {
     // End of variables declaration//GEN-END:variables
 
     private void getOperator(String tombol_text) {
-        throw new UnsupportedOperationException("Not yet implemented");
+        pilih = tombol_text.charAt(0);
+        jumlah1=jumlah1+ Double.parseDouble(display.getText());
+        display.setText("");
     }
 }
